@@ -29,21 +29,31 @@ function CarForm() {
   };
 
   return (
-    <div>
+    <div className="car-form">
       <h4>Add Car</h4>
       <form onSubmit={handleSubmit}>
-        <div>
-          <div>
+        <div className="field-group">
+          <div className="field">
             <label htmlFor="">Name</label>
-            <input type="text" value={name} onChange={handleNameChange} />
+            <input
+              className="input is-expanded"
+              type="text"
+              value={name}
+              onChange={handleNameChange}
+            />
           </div>
-          <div>
+          <div className="field">
             <label htmlFor="">Cost</label>
-            <input type="number" value={cost} onChange={handleCostChange} />
+            <input
+              className="input is-expanded"
+              type="number"
+              value={cost}
+              onChange={handleCostChange}
+            />
           </div>
         </div>
-        <div>
-          <button>Submit</button>
+        <div className="field">
+          <button className="button is-link">Submit</button>
         </div>
       </form>
     </div>

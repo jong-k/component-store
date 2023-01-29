@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
+import { addCar } from "./carsSlice";
 
 interface InitialStateType {
   name: string;
@@ -20,6 +20,13 @@ export const formSlice = createSlice({
     changeCost(state, action) {
       state.cost = action.payload;
     },
+  },
+  // addCar action이 발생하면 form을 비우기 위해 extra reducer 설정
+  extraReducers(builder) {
+    builder.addCase(addCar, (state, action) => {
+      state.name = "";
+      state.cost = 0;
+    });
   },
 });
 

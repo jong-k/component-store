@@ -14,11 +14,12 @@ function CarList() {
 
   const renderedCars = cars.map((car) => {
     return (
-      <div key={car.id}>
+      <div key={car.id} className="panel">
         <p>
           {car.name} - ${car.cost}
         </p>
         <button
+          className="button"
           onClick={() => {
             handleCarDelete(car.id);
           }}
@@ -30,7 +31,7 @@ function CarList() {
   });
 
   return (
-    <div>
+    <div className="car-list">
       {renderedCars}
       <hr />
     </div>

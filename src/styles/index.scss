@@ -1,0 +1,88 @@
+@use "reset";
+
+.car-form {
+  margin-top: 15px;
+  padding: 15px;
+
+  h4 {
+    margin-bottom: 0.75rem;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+
+    .field-group {
+      display: flex;
+      margin-bottom: 0;
+
+      .field {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        margin-right: 10px;
+
+        label {
+          margin-bottom: 0;
+          width: 70px;
+        }
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.car-list {
+  .panel {
+    font-weight: 600;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+}
+
+
+.car-list .note {
+  font-style: italic;
+  display: block;
+  margin: 40px 20px;
+}
+
+.car-value {
+  font-size: 2rem;
+  text-align: right;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+.list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-header h3.title {
+  margin-bottom: 0px;
+}
+
+.list-header .search {
+  display: flex;
+  align-items: center;
+}
+.list-header .search .label {
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
