@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { within, userEvent } from "@storybook/testing-library";
-
 import SamplePage from "../components/SamplePage";
 
 const meta = {
@@ -13,7 +12,6 @@ const meta = {
   },
 } satisfies Meta<typeof SamplePage>;
 
-export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LoggedOut: Story = {};
@@ -28,3 +26,5 @@ export const LoggedIn: Story = {
     await userEvent.click(loginButton);
   },
 };
+
+export default meta;
