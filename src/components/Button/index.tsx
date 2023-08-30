@@ -1,5 +1,3 @@
-import "./index.scss";
-
 interface ButtonProps {
   /**
    * 페이지의 주요 콜 투 액션 버튼 여부
@@ -34,15 +32,23 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+    ? "bg-blue-500 text-white"
+    : "text-gray-700 border border-gray-300 shadow-inner";
+
+  const buttonSize = {
+    small: "text-xs py-2 px-4",
+    medium: "text-sm py-2.5 px-5",
+    large: "text-base py-3 px-6",
+  };
 
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " ",
-      )}
+      className={[
+        "font-nunito-sans font-semibold rounded-full cursor-pointer inline-block leading-none",
+        mode,
+        buttonSize[size],
+      ].join(" ")}
       style={{ backgroundColor }}
       {...props}
     >

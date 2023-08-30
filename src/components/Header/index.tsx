@@ -35,9 +35,10 @@ export default function Header({
 }: HeaderProps) {
   return (
     <header>
-      <div className="storybook-header">
+      <div className="font-nunito-sans border-b border-gray-300 py-4 px-5 flex items-center justify-between">
         <div>
           <svg
+            className="inline-block align-top"
             width="32"
             height="32"
             viewBox="0 0 32 32"
@@ -58,12 +59,14 @@ export default function Header({
               />
             </g>
           </svg>
-          <h1>Acme</h1>
+          <h1 className="font-bold text-lg leading-5 mt-1 ml-2 inline-block align-top">
+            Acme
+          </h1>
         </div>
-        <div>
+        <div className="buttonBox">
           {user ? (
             <>
-              <span className="welcome">
+              <span className="text-gray-700 text-sm mr-4">
                 Welcome, <b>{user.name}</b>!
               </span>
               <Button size="small" onClick={onLogout} label="Log out" />
