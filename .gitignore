@@ -1,6 +1,16 @@
 .idea
 
+.DS_Store
+
 .env
 .venv
 env/
 venv/
+
+__pycache__
+app.egg-info
+*.pyc
+.mypy_cache
+.coverage
+htmlcov
+.cache

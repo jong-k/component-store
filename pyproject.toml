@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "coward-tracker-server"
+version = "0.1.0"
+description = ""
+authors = ["jong-k <fully.charged07@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+uvicorn = {extras = ["standard"], version = "^0.31.0"}
+fastapi = {extras = ["standard"], version = "^0.115.0"}
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
