@@ -1,13 +1,17 @@
 from fastapi import APIRouter
-from app.models.auth import EmailRequest
+from app.models.auth import UserEmail
 
+DUMMY_EMAILS = ["jhkcompany710@gmail.com"]
 
 router = APIRouter()
 
 
 @router.post("/email")
-async def simple_send(email: EmailRequest):
-    if email.email.split("@")[1] == "inu.ac.kr":
-        return {"message": "인천대학교 이메일을 확인했습니다"}
+async def verify_email(user_email: UserEmail):
+    # TODO: DB 연결 후 중복 이메일 검사 로직 구현
+    if user_email.email in DUMMY_EMAILS:
+        return {"message": "이미 존재하는 이메일입니다"}
 
-    return {"message": "이메일을 확인했습니다"}
+    # TODO: 인증번호를 이메일로 발송
+
+    return {"message": "인증번호가 발송되었습니다"}
