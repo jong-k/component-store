@@ -1,7 +1,11 @@
+from fastapi import APIRouter
+from starlette.responses import JSONResponse
+from fastapi_mail import FastMail, MessageSchema, ConnectionConfig, MessageType
 import secrets
 import string
-from fastapi import APIRouter
 from app.models.auth import EmailData
+
+conf = ConnectionConfig(MAIL_USERNAME="")
 
 
 def generate_verification_code(length=8) -> str:
