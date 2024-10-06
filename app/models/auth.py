@@ -1,7 +1,7 @@
 from pydantic import BaseModel, EmailStr
 
 
-class UserEmail(BaseModel):
+class EmailData(BaseModel):
     email: EmailStr
 
     model_config = {
